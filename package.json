@@ -1,0 +1,32 @@
+{
+  "name": "angular-demo",
+  "scripts": {
+    "clean": "rimraf source/**/*.js source/**/*.js.map dist",
+    "compile": "tsc --project source",
+    "bundle":"node systemjs.builder.js",
+    "build": "npm run clean && npm run compile && npm run bundle",
+    "postinstall": "npm run build"
+  },
+  "author": "cyrilpanicker@gmail.com",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "angular-in-memory-web-api": "~0.2.4",
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4",
+    "systemjs-builder": "^0.16.3",
+    "typescript": "~2.0.10"
+  },
+  "repository": {}
+}
